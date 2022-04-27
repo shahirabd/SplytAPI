@@ -1,0 +1,333 @@
+{
+	"info": {
+		"_postman_id": "c6feec5c-2f54-4c6e-b5c4-f84bf2b969e3",
+		"name": "Splyt",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Sample Request",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departure_date\": \"2019-01-23T13:24:35.703Z\",\r\n    \"pickup\": {\r\n        \"latitude\": 51.15,\r\n        \"longitude\": -0.15\r\n    },\r\n    \"passenger\": {\r\n        \"name\": \"John\",\r\n        \"phone_number\": \"+447594855513\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://qa-interview-test.splytech.dev/api/journeys",
+					"protocol": "https",
+					"host": [
+						"qa-interview-test",
+						"splytech",
+						"dev"
+					],
+					"path": [
+						"api",
+						"journeys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return Doc by ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qa-interview-test.splytech.dev/api/journeys/626972353ec327beb7868e3d",
+					"protocol": "https",
+					"host": [
+						"qa-interview-test",
+						"splytech",
+						"dev"
+					],
+					"path": [
+						"api",
+						"journeys",
+						"626972353ec327beb7868e3d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "No departure date",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"pickup\": {\r\n        \"latitude\": 50,\r\n        \"longitude\": -0.18\r\n    },\r\n    \"passenger\": {\r\n        \"name\": \"John\",\r\n        \"phone_number\": \"+447594855513\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://qa-interview-test.splytech.dev/api/journeys",
+					"protocol": "https",
+					"host": [
+						"qa-interview-test",
+						"splytech",
+						"dev"
+					],
+					"path": [
+						"api",
+						"journeys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "No pickup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departure_date\": \"2020-01-23T13:24:35.703Z\",\r\n    \"passenger\": {\r\n        \"name\": \"John\",\r\n        \"phone_number\": \"+447594855513\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://qa-interview-test.splytech.dev/api/journeys",
+					"protocol": "https",
+					"host": [
+						"qa-interview-test",
+						"splytech",
+						"dev"
+					],
+					"path": [
+						"api",
+						"journeys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "No latitude",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departure_date\": \"2012-01-23T13:24:35.703Z\",\r\n    \"pickup\": {\r\n        \"longitude\": -0.15\r\n    },\r\n    \"passenger\": {\r\n        \"name\": \"John\",\r\n        \"phone_number\": \"+447594855513\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://qa-interview-test.splytech.dev/api/journeys",
+					"protocol": "https",
+					"host": [
+						"qa-interview-test",
+						"splytech",
+						"dev"
+					],
+					"path": [
+						"api",
+						"journeys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "No longitude",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departure_date\": \"2012-01-23T13:24:35.703Z\",\r\n    \"pickup\": {\r\n        \"longitude\": -0.15\r\n    },\r\n    \"passenger\": {\r\n        \"name\": \"John\",\r\n        \"phone_number\": \"+447594855513\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://qa-interview-test.splytech.dev/api/journeys",
+					"protocol": "https",
+					"host": [
+						"qa-interview-test",
+						"splytech",
+						"dev"
+					],
+					"path": [
+						"api",
+						"journeys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "No passenger",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departure_date\": \"2012-01-23T13:24:35.703Z\",\r\n    \"pickup\": {\r\n        \"latitude\": 51.15,\r\n        \"longitude\": -0.15\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://qa-interview-test.splytech.dev/api/journeys",
+					"protocol": "https",
+					"host": [
+						"qa-interview-test",
+						"splytech",
+						"dev"
+					],
+					"path": [
+						"api",
+						"journeys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "No name",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departure_date\": \"2012-01-23T13:24:35.703Z\",\r\n    \"pickup\": {\r\n        \"latitude\": 51.15,\r\n        \"longitude\": -0.15\r\n    },\r\n    \"passenger\": {\r\n        \"phone_number\": \"+447594855513\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://qa-interview-test.splytech.dev/api/journeys",
+					"protocol": "https",
+					"host": [
+						"qa-interview-test",
+						"splytech",
+						"dev"
+					],
+					"path": [
+						"api",
+						"journeys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "No phone number",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departure_date\": \"2012-01-23T13:24:35.703Z\",\r\n    \"pickup\": {\r\n        \"latitude\": 51.15,\r\n        \"longitude\": -0.15\r\n    },\r\n    \"passenger\": {\r\n        \"name\": \"John\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://qa-interview-test.splytech.dev/api/journeys",
+					"protocol": "https",
+					"host": [
+						"qa-interview-test",
+						"splytech",
+						"dev"
+					],
+					"path": [
+						"api",
+						"journeys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "With Surname",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departure_date\": \"2019-01-23T13:24:35.703Z\",\r\n    \"pickup\": {\r\n        \"latitude\": 51.15,\r\n        \"longitude\": -0.15\r\n    },\r\n    \"passenger\": {\r\n        \"name\": \"John\",\r\n        \"surname\": \"Smith\",\r\n        \"phone_number\": \"+447594855513\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://qa-interview-test.splytech.dev/api/journeys",
+					"protocol": "https",
+					"host": [
+						"qa-interview-test",
+						"splytech",
+						"dev"
+					],
+					"path": [
+						"api",
+						"journeys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Return Doc by ID Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://qa-interview-test.splytech.dev/api/journeys/626972353ec327beb7868e3d",
+					"protocol": "https",
+					"host": [
+						"qa-interview-test",
+						"splytech",
+						"dev"
+					],
+					"path": [
+						"api",
+						"journeys",
+						"626972353ec327beb7868e3d"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wrong date format",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departure_date\": \"2019-01-23\",\r\n    \"pickup\": {\r\n        \"latitude\": 51.15,\r\n        \"longitude\": -0.15\r\n    },\r\n    \"passenger\": {\r\n        \"name\": \"John\",\r\n        \"surname\": \"Smith\",\r\n        \"phone_number\": \"+447594855513\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://qa-interview-test.splytech.dev/api/journeys",
+					"protocol": "https",
+					"host": [
+						"qa-interview-test",
+						"splytech",
+						"dev"
+					],
+					"path": [
+						"api",
+						"journeys"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Wrong phone format",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"departure_date\": \"2019-01-23T13:24:35.703Z\",\r\n    \"pickup\": {\r\n        \"latitude\": 51.15,\r\n        \"longitude\": -0.15\r\n    },\r\n    \"passenger\": {\r\n        \"name\": \"John\",\r\n        \"phone_number\": \"447594855513\"\r\n    }\r\n}"
+				},
+				"url": {
+					"raw": "https://qa-interview-test.splytech.dev/api/journeys",
+					"protocol": "https",
+					"host": [
+						"qa-interview-test",
+						"splytech",
+						"dev"
+					],
+					"path": [
+						"api",
+						"journeys"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
